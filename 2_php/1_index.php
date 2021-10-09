@@ -11,11 +11,33 @@
     $surname='Nowak';
 echo 'imie: name <hr>';
 echo "<br>imie: $name";
-
+// echo Imię i nazwisko $name $Surname
 
 // heredoc
 echo <<< LABEL
+  Imię i nazwisko $name $surname <br>
+  Kurs programowania
+  <br>
+LABEL;
 
+//
+$text=<<<LABEL
+<hr>
+Opcja II<br>
+    Imię i nazwisko $name $surname <br>
+    Kurs programowania
+    <br>
+LABEL;
+
+echo "<br>$text";
+
+//skladnia nowdoc
+
+echo <<< 'LABEL'
+<hr>
+  Imię i nazwisko $name $surname <br>
+  Kurs programowania
+  <br>
 LABEL;
      ?>
   </body>
