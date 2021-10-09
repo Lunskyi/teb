@@ -6,6 +6,11 @@
   </head>
   <body>
     <p>Strona Glówna</p>
-    
+    <?php
+    $name='Janusz';
+    $surname='Nowak';
+echo 'imie: name <hr>';
+echo "<br>imie: $name";
+     ?>
   </body>
 </html>
