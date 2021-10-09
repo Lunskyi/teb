@@ -11,6 +11,12 @@
     $surname='Nowak';
 echo 'imie: name <hr>';
 echo "<br>imie: $name";
+
+
+// heredoc
+echo <<< LABEL
+
+LABEL;
      ?>
   </body>
 </html>
