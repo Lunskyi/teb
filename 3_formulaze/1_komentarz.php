@@ -14,7 +14,7 @@
     liniach
     */
 
-    // .kontonacja = sojedinenije stroki w php
+    // .kontonacja = sojedinenije stroki w php сумирует и выводит строку (медленно)
     $name="Janusz";
     $surname="Kowalski";
     echo "1. Imię"." i nazwisko: $name"."$surname";
@@ -25,8 +25,8 @@ echo $text;
 $text = $surname;
 echo "<br>$text";
 
-// , Interpolacija = razdielienie stroki
-echo "<br>3. Imię","i nazwisko";
+// , Interpolacija = вывод всех данных в строке по очереди (быстрый)
+echo "<br>3. Imię","i nazwisko: ",$name;
      ?>
 
   </body>
