@@ -1,6 +1,6 @@
 <?php
 $name="Janusz";
 echo <<< T
-imię: $name;
+imię: $name
 T;
  ?>

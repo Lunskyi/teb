@@ -8,10 +8,12 @@
     <h3>Strona Główna</h3>
     Począntek Strony<br>
 <?php
-include './new.php'; //открывается указаный путь warning
-include_once 'new.php';//перед открытием проверяет не был ли раньше уже открыт warning
+// warning програма работает дальше
+// fatal error  програма не продолжает работу после ошибки
+include './new.php'; //открывается указаный путь,warning
+include_once 'new.php';//перед открытием проверяет не был ли раньше уже открыт, warning
 require 'new.php'; //открывается указаный путь, Fatal error
-require 'new.php'; //открывается указаный путь, Fatal error однажды
+require_once 'new.php'; //открывается указаный путь, Fatal error 
 
 include 'script/test1.php'; //открывается указаный путь с папки warning
 
