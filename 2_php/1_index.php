@@ -9,9 +9,8 @@
     <?php
     $name='Janusz';
     $surname='Nowak';
-echo 'imie: name <hr>';
-echo "<br>imie: $name";
-// echo Imię i nazwisko $name $Surname
+    echo 'imie: $name';
+    echo "<br>imie: $name<hr>";
 
 // heredoc
 echo <<< LABEL
