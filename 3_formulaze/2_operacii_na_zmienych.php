@@ -23,7 +23,7 @@ echo "<hr>$hex1<hr>";//42 => 2A(16) => 10*16^0+2*16*1 = 10+32 =49(16)
 
 $x=10;
 $y=10.0;
-// сравнивает два числа
+// ==сравнивает два числа
 if ($x==$y) {
   echo "Rowne";
 } else {
@@ -36,15 +36,16 @@ if ($x===$y) {
   echo "<br>nieidentyczne";
 }
 echo "<br>";
-echo gettype($x);//integer
+//gettype - Возвращает тип переменной
+echo gettype($x);//integer/ выводим возвращенный тип переменной
 echo "<br>";
 echo gettype($y);//double
 
 /*
 postnkrementacja $i++ сначала выводит потом увеличивает
-prenkrementacja ++i$ сначала увеличивает потом выводит
+prenkrementacja ++$i сначала увеличивает потом выводит
 postderementacja $i-- сначала выводит потом уменьшает
-predekrementacja --i$ сначала уменьшает потом выводит
+predekrementacja --$i сначала уменьшает потом выводит
 */
 
 $x=1;
