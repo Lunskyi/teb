@@ -15,18 +15,19 @@
     */
 
     // .kontonacja = sojedinenije stroki w php сумирует и выводит строку (медленно)
-    $name="Janusz";
+    $name="Janusz ";
     $surname="Kowalski";
     echo "1. Imię"." i nazwisko: $name"."$surname";
 
-$text = "<br>2. Imię i nazwisko: ";
-$text .=$name;
-echo $text;
-$text = $surname;
-echo "<br>$text";
+$text = "<br>2. Imię i nazwisko: ";//ввели переменную с текстом "<br>2. Imię i nazwisko: "
+$text .=$name; /*к   значению переменной $text додаем значение переменной $name и получаем
+значение "Imię i nazwisko: Janusz", что закрепляется за переменной $text*/
+$text.=$surname;/*к   значению переменной $text додаем значение переменной $surname и получаем
+значение "Imię i nazwisko: Janusz Kowalski", что закрепляется за переменной $text*/
+echo $text;//выводим "Imię i nazwisko: Janusz Kowalski"
 
 // , Interpolacija = вывод всех данных в строке по очереди (быстрый)
-echo "<br>3. Imię","i nazwisko: ",$name;
+echo "<br>3. Imię ","i nazwisko: ",$name ,$surname;
      ?>
 
   </body>

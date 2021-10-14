@@ -1,3 +1,4 @@
-<?php
-echo "<hr> Plik o nazwie: new.php<hr>";
+<?
+echo "<hr> Ma byc imię: $name<hr>";
+
  ?>

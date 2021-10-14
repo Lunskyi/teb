@@ -9,20 +9,20 @@
     <?php
     $name='Janusz';
     $surname='Nowak';
-    echo 'imie: $name';
-    echo "<br>imie: $name<hr>";
+    echo "1. imie: $name";//линейно выводим текст "1.imie: $name" где $name это переменная
+    echo "<br>surname: $surname<hr>";
 
-// heredoc
+// heredoc это способ вывода текста после тега echo <<< и до ; (крапки с запятой)
 echo <<< LABEL
-  Imię i nazwisko $name $surname <br>
+  2. Imię i nazwisko $name $surname <br>
   Kurs programowania
   <br>
 LABEL;
 
-//
+//можно прикрепить вывод текста heredoc к переменной
 $text=<<<LABEL
 <hr>
-Opcja II<br>
+3. Opcja II<br>
     Imię i nazwisko $name $surname <br>
     Kurs programowania
     <br>
@@ -34,7 +34,7 @@ echo "<br>$text";
 
 echo <<< 'LABEL'
 <hr>
-  Imię i nazwisko $name $surname <br>
+  4. Imię i nazwisko $name $surname <br>
   Kurs programowania
   <br>
 LABEL;

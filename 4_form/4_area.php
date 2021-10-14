@@ -6,9 +6,9 @@
   </head>
   <body>
     <h3>Pole i obwód</h3>
-    <form action="4_area.php" method="post">
-      <input type="text" name="sideA" value="Podaj dlugosc strony A">
-      <input type="text" name="sideB" value="Podaj dlugosc strony B">
+    <form action="skrypt.php" method="post">
+      <input type="text" name="sideA" placeholder="Podaj dlugosc strony A">
+      <input type="text" name="sideB" placeholder="Podaj dlugosc strony B">
       <input type="submit" name="button" value="Zatwierdz">
 
     </form>

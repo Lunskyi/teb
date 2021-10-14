@@ -43,7 +43,8 @@ Narodowość
     //isset — Определяет, была ли установлена переменная значением, отличным от null.
     //empty - Проверка пуста ли переменная
     if (isset($_GET['button'])) {  //если переменная $_GET['button'] отлична от нуля (если была нажата кнопка),то
-      if (!empty($_GET['name'])&&!empty($_GET['surname'])&&!empty($_GET['sex'])) { //если поля под названием name, surname, sex не пустые, то
+      if (!empty($_GET['name'])&&!empty($_GET['surname'])&&!empty($_GET['sex'])) { /*если поля под названием
+        name, surname, sex не пустые, то*/
       //первый способ вывести результат
       /*echo "Twoje imię: ",$_GET['name'];
       echo "<br>";
@@ -56,6 +57,14 @@ Narodowość
       Twoje imię i nazwisko: $_GET[name] $_GET[surname]<br>
       Płec: $_GET[sex]
       DATA;
+      */
+      /*
+
+          strtolower() - Преобразует строку в нижний регистр
+          ucfirst() - Преобразует первый символ строки в верхний регистр
+          ucwords() - Преобразует в верхний регистр первый символ каждого слова в строке
+          mb_strtoupper() - Приведение строки к верхнему регистру
+
       */
       $name=trim($_GET['name']);//вводим в условие переменную $name и с помощью функции trim Удаляет пробелы (или другие символы) из начала и конца строки (поля под названием name)
       $name=substr(ucfirst(strtolower($name)),0,10); /*здесь очищенную от пробелов переменную $name с помощью функции strtolower преобразовываем
