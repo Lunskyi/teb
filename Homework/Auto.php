@@ -23,6 +23,18 @@
         <option value="toyota">Toyota</option>
         <option value="volkswagen">Volkswagen</option>
       </select>
+      <select class="" name="">
+
+      </select>
+    <!--  <select name="rok">
+        <option value="1950">
+          <?php
+          for ($rok=1950; $rok < date('Y'); $rok++) {
+            echo "$rok <br>";
+          }
+           ?>
+        </option>
+      </select>-->
       <input type="text" name="model" placeholder="Wpisz model">
       <hr><br>Wybierz kolor auta <br>
       <input type="color" name="color">
