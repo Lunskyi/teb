@@ -68,5 +68,5 @@
     echo "<br>"; //переносим на следующую строку
   }
   //echo "$count";
-  echo "<br>Iłośc elementuv tablicy: ".$count; // выводим Iłośc elementuv tablicy: и значение переменной $count
+   echo "<br>Iłośc elementuv tablicy: ". count($person); // выводим Iłośc elementuv tablicy: и количество элементов в массиве переменной $pesona
  ?>

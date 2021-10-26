@@ -1,41 +1,66 @@
 <h4>Funkcje strzalkowe</h4>
 <?php
-function cube($n)
-{
-  return($n*$n*$n);
-}
-$age=[1,2,3,4,5,6];
-$b=array_map('cube', $age);
-print_r($b);
-echo "<hr>";
+  function cube($n) { //создание функции с именем cube так же новая переменная $n
+    return($n*$n*$n); //возвращает значение переменной $n вознесенную в 3 степень
+  }
+
+  $age=[1,2,3,4,5,6]; //создаем переменную $age и присваиваем масиив от 1 до 6
+  $b=array_map('cube', $age); // создаем переменую $b и присваиваем ей массив $age, где к каждому элементу масива $age применяется функция cube
+  echo "<pre>";
+  print_r($b); // вывлдим получившейся массив в вертикальном формате
+  echo "</pre>";
+  echo "<hr>";
 
 ##########################################
 
-function validateName($name) {
-  return ucfirst(strtolower(trim($name)));
-}
-$names=["januSZ","AgnIEszkA","miCHał"];
-$validateNames=array_map('validateName', $names);
-print_r($names);
-echo "<br>";
-print_r($validateNames);
-echo "<br>";
+  function validateName($name) { // создание функции с именем validateName так же новая переменная $name
+    return ucfirst(strtolower(trim($name))); /* возвращает значение переменной $name после функций
+    trim - очищает от пробелов до и после символов
+    strtolower - переводим все символы в нижний регистр
+    ucfirst - переводим первый символ в верхний регистр */
+  }
+
+  $names=["januSZ","AgnIEszkA","miCHał"]; // создаем переменную и присваиваем массив данных
+  $validateNames=array_map('validateName', $names); /* создание переменной $validateNames и присваивание ей массива $names, где к каждому элементу
+  масива $names применяем функцию validateName*/
+  print_r($names); // выводим массив $names
+  echo "<br>";
+  print_r($validateNames);// выводим массив $validateNames (массив $names в котором каждый элемент измененен функцией validateName)
+  echo "<br>";
+  echo "<hr>";
 
 ##########################################
-// Funkcja anonimowa pelna
-$salary=[3500, 7700, 2800, 12000];
-$salaryIncrease=array_map(function($salary) {
-  return $salary*1.15;
-}, $salary);
-print_r($salary);
-echo "<br>";
-print_r($salaryIncrease);
+
+  // Funkcja anonimowa pelna
+  $salary=[3500, 7700, 2800, 12000]; // создание массива и присваивание его новой переменной $salary
+  $salaryIncrease=array_map(function($salary) { /*создаем переменную $salaryIncrease. далее присваиваем ей массив $salary где к каждому элементу массива
+    будет пременена функция function которую мы не описывали заранее, а начинаем ее описание сейчас. Так же function($salary) - $salary это переменная
+    внутри функции,и не имеет значение массива, а используется как новая переменная для функции и если ее заменить на другую ничего не изменится */
+    return $salary*1.15; //возвращаем значение внутрифункцивой переменой умноженной на 1,15, что будет применено к каждому элементу массива
+  }, $salary); // закрываем описание функции и после запятой указываем к какому масиву будет пременена функция
+  print_r($salary); // вывод массива $salary
+  echo "<br>";
+  print_r($salaryIncrease); // вывод обработаного с помощью функции массива $salaryIncrease
+  echo "<hr>";
 
 ##########################################
-// Funkcja anonimowa strzalkowe
-$salary=[3500, 7700, 2800, 12000];
-//$salaryIncrease=array_map(fn($salary)=>$salary*1.15, $salary);
-$salaryIncrease=array_map(fn($salary):float=>$salary*1.15, $salary); // :float двоеточие укаывает на тип даннных
-echo "<br>";
-print_r($salaryIncrease);
+
+  // Funkcja anonimowa strzalkowe
+  $salary=[3500, 7700, 2800, 12000]; // создание массива и присваивание его новой переменной $salary
+  $salaryIncrease=array_map(fn($salary)=>$salary*1.5, $salary); /*создание переменной $salaryIncrease. array_map применяет функцию к каждому элементу
+  массива.
+  краткое создание функции
+  fn($salary) - fn имя функции, $salary внутреняя чистая переменная функции не имеющая значения массива
+  => стрелка обозначает действия внутри функции и заменяет функцию return. внутренюю переменную функции *1.5 (переменнпя обозначает элемент масива)
+  последнее место в дужках array_map(fn($salary)=>$salary*1.5, $salary) то есть $salary указывает массив с которым будет работа.
+   */
+  print_r($salary); // вывод массива $salary
+  echo "<br>";
+  print_r($salaryIncrease); // вывод массива после изменений array_map
+  $salaryIncrease=array_map(fn($salary):float=>$salary*1.15, $salary); // :float двоеточие укаывает на тип даннных, это все изменения
+  echo "<br>";
+  print_r($salary);
+  echo "<br>";
+  print_r($salaryIncrease);
+  echo "<hr>";
  ?>
