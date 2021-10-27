@@ -6,10 +6,10 @@
 
   $age=[1,2,3,4,5,6]; //создаем переменную $age и присваиваем масиив от 1 до 6
   $b=array_map('cube', $age); // создаем переменую $b и присваиваем ей массив $age, где к каждому элементу масива $age применяется функция cube
-  echo "<pre>";
+    echo "<pre>";
   print_r($b); // вывлдим получившейся массив в вертикальном формате
-  echo "</pre>";
-  echo "<hr>";
+    echo "</pre>";
+    echo "<hr>";
 
 ##########################################
 
@@ -24,10 +24,10 @@
   $validateNames=array_map('validateName', $names); /* создание переменной $validateNames и присваивание ей массива $names, где к каждому элементу
   масива $names применяем функцию validateName*/
   print_r($names); // выводим массив $names
-  echo "<br>";
+    echo "<br>";
   print_r($validateNames);// выводим массив $validateNames (массив $names в котором каждый элемент измененен функцией validateName)
-  echo "<br>";
-  echo "<hr>";
+    echo "<br>";
+    echo "<hr>";
 
 ##########################################
 
@@ -39,9 +39,9 @@
     return $salary*1.15; //возвращаем значение внутрифункцивой переменой умноженной на 1,15, что будет применено к каждому элементу массива
   }, $salary); // закрываем описание функции и после запятой указываем к какому масиву будет пременена функция
   print_r($salary); // вывод массива $salary
-  echo "<br>";
+    echo "<br>";
   print_r($salaryIncrease); // вывод обработаного с помощью функции массива $salaryIncrease
-  echo "<hr>";
+    echo "<hr>";
 
 ##########################################
 
@@ -55,12 +55,12 @@
   последнее место в дужках array_map(fn($salary)=>$salary*1.5, $salary) то есть $salary указывает массив с которым будет работа.
    */
   print_r($salary); // вывод массива $salary
-  echo "<br>";
+    echo "<br>";
   print_r($salaryIncrease); // вывод массива после изменений array_map
   $salaryIncrease=array_map(fn($salary):float=>$salary*1.15, $salary); // :float двоеточие укаывает на тип даннных, это все изменения
-  echo "<br>";
-  print_r($salary);
-  echo "<br>";
-  print_r($salaryIncrease);
-  echo "<hr>";
+    echo "<br>";
+  print_r($salary); // вывод массива $salary
+    echo "<br>";
+  print_r($salaryIncrease); // вывод массива после изменений array_map
+    echo "<hr>";
  ?>
