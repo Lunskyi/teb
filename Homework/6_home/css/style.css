@@ -1,0 +1,22 @@
+h2 {
+  color: red;
+}
+table {
+  width: 100%;
+  border:1px solid black;
+}
+td {
+  text-align: left;
+  padding: 8px;
+  border:1px solid black;
+}
+th {
+  text-align: center;
+  padding: 8px;
+  border:1px solid black;
+}
+tr {
+  text-align: left;
+  padding: 8px;
+  border:1px solid black;
+}

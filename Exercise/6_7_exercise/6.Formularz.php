@@ -14,9 +14,11 @@ $_POST = array();
       <input type="submit" name="button" value="Zatwierdz">
     </form>
     <?php
-      if (!empty($_POST['ilosc'])) {
-        echo "<h4>Wypelni kolor</h4>";
-        echo "<form action=\"./6_script.php\" method=\"POST\">";
+      if (empty($_POST['ilosc'])) {
+        echo "Wypelni kolor";
+        ?>
+        <form action=./6_script.php method=POST>;
+        <?php
       for ($i=0; $i <$_POST['ilosc']; $i++) {
         $count=$i+1;
         echo "<input type=\"text\" name=\"color$i\" placeholder=\"Ulubiny kolor $count\"><br><hr>";

@@ -1,0 +1,9 @@
+table,td,th {
+  border: 1px solid blue;
+  border-collapse: collapse;
+  padding: 8px;
+  text-align: center;
+}
+h3 {
+  color: red;
+}
