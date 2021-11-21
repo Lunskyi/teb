@@ -1,5 +1,6 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,15 +16,37 @@
   <link rel="stylesheet" href="../dist/css/adminlte.min.css">
 </head>
 <body class="hold-transition register-page">
+  <!-- comunicat z bladem -->
+  <?php
+    if (isset($_SESSION['error'])) {
+      echo <<<ERROR
+      <div class="card-body">
+        <div class="card card-online card-danger">
+          <div class="card-header">
+            <h3 class="card-title">SESSION['ERROR']</h3>
+          </div>
+          <div class="card-body">
+        $_SESSION[error]
+          </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+      </div>
+ERROR;
+    unset($_SESSION['error']);
+    }
+  ?>
+
 <div class="register-box">
   <div class="card card-outline card-primary">
     <div class="card-header text-center">
+
       <a href="./register.php" class="h1"><b>Registration</b></a>
     </div>
     <div class="card-body">
       <p class="login-box-msg">Rejestracja nowego Uzytkownika</p>
 
-      <form action="../index.html" method="post">
+      <form action="../scripts/register.php" method="post">
         <div class="input-group mb-3">
           <input type="text" name="name" class="form-control" placeholder="Podaj imię">
           <div class="input-group-append">
@@ -32,7 +55,7 @@
             </div>
           </div>
         </div>
-      <form action="../index.html" method="post">
+      <form action="../index.php" method="post">
         <div class="input-group mb-3">
           <input type="text" class="form-control" name="surname" placeholder="Podaj nazwisko">
           <div class="input-group-append">
@@ -81,7 +104,7 @@
             $sql="SELECT * FROM `cities`";
             $result =$db->query($sql);
             while ($city = $result->fetch_assoc()) {
-                echo "<option> $city[city] </option>";
+                echo "<option value=\"$city[city_id]\"> $city[city] </option>";
             }
             ?>
             </select>
@@ -100,11 +123,11 @@
 
         <div class="form-group">
           <div class="custom-control custom-radio">
-            <input class="custom-control-input" type="radio" id="customRadio1" value="m" name="gender">
+            <input class="custom-control-input" type="radio" id="customRadio1" value="1" name="gender">
             <label for="customRadio1" class="custom-control-label">M</label>
           </div>
           <div class="custom-control custom-radio">
-            <input class="custom-control-input" type="radio" id="customRadio2" value="w" name="gender">
+            <input class="custom-control-input" type="radio" id="customRadio2" value="2" name="gender">
             <label for="customRadio2" class="custom-control-label">W</label>
           </div>
         </div>

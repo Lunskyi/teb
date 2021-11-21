@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,8 +16,28 @@
   <link rel="stylesheet" href="./dist/css/adminlte.min.css">
 </head>
 <body class="hold-transition login-page">
+
 <div class="login-box">
   <!-- /.login-logo -->
+  <?php
+  if (isset($_SESSION['error'])) {
+    echo <<<ERROR
+    <div class="card-body">
+    <div class="card card-online card-danger">
+    <div class="card-header">
+    <h3 class="card-title">SUCCESS</h3>
+    </div>
+    <div class="card-body">
+    $_SESSION[error]
+    </div>
+    <!-- /.card-body -->
+    </div>
+    <!-- /.card -->
+    </div>
+    ERROR;
+    unset($_SESSION['error']);
+  }
+  ?>
   <div class="card card-outline card-primary">
     <div class="card-header text-center">
       <a href="./index.php" class="h1"><b>Logowanie</b></a>
