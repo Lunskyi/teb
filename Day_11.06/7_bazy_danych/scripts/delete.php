@@ -11,5 +11,5 @@ if (!empty($_GET['deleteId'])) {
       $_SESSION['aRow']=-1;
     }
 }
-header('location: ../3_db_select_table_delete.php');
- ?>
+header('location: ../5_db_select_table_insert_update.php');
+?>
