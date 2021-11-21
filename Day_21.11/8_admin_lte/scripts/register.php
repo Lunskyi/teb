@@ -45,10 +45,12 @@ require_once './connect.php';
   $stmt = $db->prepare($sql);
   $stmt->bind_param("sssssss",$_POST['email'],$_POST['city_id'],$_POST['name'],$_POST['surname'],$_POST['birthday'],$_POST['gender'],$pass);
     if ($stmt->execute()) {
-      $_SESSION['error']= "Prawidlowo dodano uzytkownika";
-      header('location: ../');
+      $_SESSION['error']['success']= "Prawidlowo dodano uzytkownika";
+      header('location: ../index.php');
+      exit();
     } else {
-      $_SESSION['error']= "Nie dodano uzytkownika";
-      header ('location: ../pages/register.php');
+      $_SESSION['error']= "Uzytkownika nie dodano";
+      header('location: ../pages/register.php');
+      exit();
     }
  ?>

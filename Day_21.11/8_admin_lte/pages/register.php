@@ -19,6 +19,7 @@
   <!-- comunicat z bladem -->
   <?php
     if (isset($_SESSION['error'])) {
+      $error=$_SESSION['error'];
       echo <<<ERROR
       <div class="card-body">
         <div class="card card-online card-danger">
@@ -26,15 +27,16 @@
             <h3 class="card-title">SESSION['ERROR']</h3>
           </div>
           <div class="card-body">
-        $_SESSION[error]
+        $error
           </div>
           <!-- /.card-body -->
         </div>
         <!-- /.card -->
       </div>
 ERROR;
-    unset($_SESSION['error']);
-    }
+unset($_SESSION['error']);
+
+  }
   ?>
 
 <div class="register-box">
@@ -160,7 +162,7 @@ ERROR;
         </a>
       </div>
 
-      <a href="index.php" class="text-center">Juz posiadam konto</a>
+      <a href="../index.php" class="text-center">Juz posiadam konto</a>
     </div>
     <!-- /.form-box -->
   </div><!-- /.card -->
